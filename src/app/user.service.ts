@@ -5,14 +5,18 @@ import { auth } from 'firebase/app'
 
 interface user {
 	username: string,
-	uid: string
+	uid: string,
+	
 }
 
 @Injectable()
 export class UserService {
 	private user: user
 
-	constructor(private afAuth: AngularFireAuth) {
+
+	constructor(private afAuth: AngularFireAuth,
+		
+	) {
 
 	}
 
@@ -51,8 +55,9 @@ export class UserService {
 		}
 		return false
 	}
-
+	
 	getUID(): string {
 		return this.user.uid
 	}
+
 }

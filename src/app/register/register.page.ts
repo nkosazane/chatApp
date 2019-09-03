@@ -46,7 +46,7 @@ export class RegisterPage implements OnInit {
 		}
 
 		try {
-			const res = await this.afAuth.auth.createUserWithEmailAndPassword(username + '@codedamn.com', password)
+			const res = await this.afAuth.auth.createUserWithEmailAndPassword(username + '@gmail.com', password)
 
 			this.afstore.doc(`users/${res.user.uid}`).set({
 				username
@@ -57,7 +57,7 @@ export class RegisterPage implements OnInit {
 				uid: res.user.uid
 			})
 
-			this.presentAlert('Success', 'You are registered!')
+			this.presentAlert('Successfully', 'You are registered!')
 			this.router.navigate(['/tabs'])
 
 		} catch(error) {

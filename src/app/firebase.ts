@@ -1,10 +1,11 @@
 const config = {
-    apiKey: "AIzaSyAk0794OsQuDuoEdUfF9nUM_zD17lfRXEE",
-    authDomain: "codedamn-socialapp.firebaseapp.com",
-    databaseURL: "https://codedamn-socialapp.firebaseio.com",
-    projectId: "codedamn-socialapp",
-    storageBucket: "codedamn-socialapp.appspot.com",
-    messagingSenderId: "263473733320"
+    apiKey: "AIzaSyA37v4BGxK2-VvDt2xqLkwIwor0quPQaZ4",
+    authDomain: "chatboadapp.firebaseapp.com",
+    databaseURL: "https://chatboadapp.firebaseio.com",
+    projectId: "chatboadapp",
+    storageBucket: "",
+    messagingSenderId: "1018631362698",
+    appId: "1:1018631362698:web:2ffb1f9ff60c8761"
 }
 
 export default config

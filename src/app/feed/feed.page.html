@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>feed</ion-title>
-  </ion-toolbar>
-</ion-header>
+
 
 <ion-content padding>
 
+  <div class="chat" *ngFor="let chat of chatRef | async">
+    <div class="me" *ngIf ="uid==chat.UserID">
+      {{chat.Message}}
+      </div>
+      <div class="you"*ngIf ="uid != chat.UserID">
+        <span class="name">
+          {{chat.Name}}
+          </span>
+          <br>
+          {{chat.Message}}
+          </div>
+          </div>
+          <img src="assets/1.jpg" height="10%" (click)="shareTwitter()">
+          <img src="assets/2.jpg" height="10%" (click)="shareEmail()">
+          <img src="assets/3.jpg" height="10%" (click)="shareFacebook()">
+          <img src="assets/4.png" height="9%" (click)="shareWhatsApp()">
+     
 </ion-content>
+<ion-footer>
+  <ion-item>
+    <ion-input placeholder="type...."[(ngModel)]="text"></ion-input>
+    <ion-button (click)="send()" fill="clear"icon-only slot="end">
+    <ion-icon name="send"></ion-icon>
+  </ion-button>
+    </ion-item>
+    </ion-footer>

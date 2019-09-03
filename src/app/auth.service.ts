@@ -4,8 +4,10 @@ import { UserService } from './user.service'
 
 @Injectable()
 export class AuthService implements CanActivate {
+	authState: any = null;
 
 	constructor(private router: Router, private user: UserService) {
+		
 
 	}
 
